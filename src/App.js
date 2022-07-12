@@ -15,7 +15,7 @@ export default function App() {
   const handleClick = (e) => {
     e.preventDefault();
     if (fname === "" || lname === "" || address === "" || email === "") {
-      alert(`enter all required fields`);
+      setError(`enter all required fields`);
     }else{
       setIsopen(true);
     }
@@ -89,7 +89,7 @@ export default function App() {
         </div>
         <button>Submit</button>
       </form>
-      {isOpen && <Modal fname={fname} lname={lname} email={email} address={address} selectedValue={selectedValue} closeModal = {() => setIsopen(!isOpen)} />}
+      {!error && isOpen && <Modal fname={fname} lname={lname} email={email} address={address} selectedValue={selectedValue} closeModal = {() => setIsopen(!isOpen)} />}
     </div>
   );
 }
