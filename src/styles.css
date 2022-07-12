@@ -1,0 +1,16 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    background-color: lightyellow;
+}
+
+.labels {
+    padding: 10px;
+}
+
+.inputs {
+    padding: 10px;
+    align-items: center;
+}
